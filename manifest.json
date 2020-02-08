@@ -1,1 +1,22 @@
+{
 
+  "manifest_version": 2,
+  "name": "Clock",
+  "version": "1.0",
+
+  "description": "",
+
+  "icons": {
+    "48": "icons/clock-48.png",
+    "96": "icons/clock-96.png"
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/clock.js"]
+    }
+  ]
+
+}

@@ -11,6 +11,16 @@
     "96": "icons/clock-96.png"
   },
 
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/clock-32.png",
+    "default_title": "World Clock",
+    "default_popup": "popup/timezone.html"
+  },
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

@@ -1,16 +1,15 @@
 {
 
   "manifest_version": 2,
-  "name": "Clock",
+  "name": "World Clock",
   "version": "1.0",
 
-  "description": "",
+  "description": "Add a clock to the page with a selected time zone.",
 
   "icons": {
     "48": "icons/clock-48.png",
     "96": "icons/clock-96.png"
   },
-
 
   "content_scripts": [
     {
@@ -18,5 +17,4 @@
       "js": ["content_scripts/clock.js"]
     }
   ]
-
 }

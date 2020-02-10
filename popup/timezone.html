@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+<html>
+  <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="timezone.css"/>
-</head>
+  </head>
 
 <body>
-
-    <div id="popup-content">
-        <div class="button">1</div>
-        <div class="button">2</div>
-        <div class="button">3</div>
-    </div>
-
-    <script src="timezone.js"></script>
-
+  <div id="popup-content">
+    <div class="button campus">New York</div>
+    <div class="button campus">Abu Dhabi</div>
+    <div class="button campus">Shanghai</div>
+    <div class="button reset">Reset</div>
+  </div>
+  <div id="error-content" class="hidden">
+    <p>Can't load World Clocks on this web page.</p><p>Try a different page.</p>
+  </div>
+  <script src="timezone.js"></script>
 </body>
 
 </html>

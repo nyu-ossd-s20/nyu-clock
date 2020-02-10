@@ -21,6 +21,12 @@
     "default_popup": "popup/timezone.html"
   },
 
+  "web_accessible_resources": [
+    "campus/NY.jpg",
+    "campus/AD.jpg",
+    "campus/SH.jpg"
+  ],
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

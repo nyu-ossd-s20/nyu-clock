@@ -73,6 +73,7 @@
     container.style.width = "50vw";
     container.style.display = "flex";
     container.style.backgroundImage = d;
+    container.style.opacity = 0.85;
     container.style.backgroundRepeat = "no-repeat";
     container.style.backgroundSize = "cover";
     container.style.backgroundPosition = "center";
@@ -82,6 +83,7 @@
     container.style.fontSize = "80px";
     container.style.border = "1px solid #ccc";
     container.style.padding = "0px 5px 0px 5px";
+    container.style.textShadow = "6px 6px 0px rgba(0,0,0,0.3)";
     container.className = "container-div";
     container.id = "container-id";
     campusDIV.appendChild(container);

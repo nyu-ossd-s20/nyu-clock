@@ -11,24 +11,34 @@
 
   function showTime(choice){
 
-    switch (choice) {
-      case "New York":
-        var date = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-        date = new Date(date);
-      case "Abu Dhabi":
-        var date = new Date().toLocaleString("en-US", {timeZone: "Asia/Dubai"});
-        date = new Date(date);
-      case "Shanghai":
-        var date = new Date().toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
-        date = new Date(date);
+    console.log(choice);
+    let date;
+
+    if (choice === "New York") {
+      console.log("Case NY");
+      date = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
     }
+    else if (choice === "Abu Dhabi") {
+      console.log("Case AD");
+      date = new Date().toLocaleString("en-US", {timeZone: "Asia/Dubai"});
+    }
+    else if (choice ===  "Shanghai") {
+      console.log("Case SH");
+      date = new Date().toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
+    } else {
+      console.log("ERR");
+      date = new Date();
+    }
+
+    date = new Date(date)
+    console.log(date);
 
     var h = date.getHours();
     var m = date.getMinutes();
     var s = date.getSeconds();
     var session = "AM";
 
-    if (h == 0){
+    if (h === 0){
       h = 12;
     }
     if (h > 12){
@@ -104,8 +114,9 @@
   /**
    * Listen for messages from the background script.
    * Call "beastify()" or "reset()".
-  */
+   */
   browser.runtime.onMessage.addListener((message) => {
+    console.log(message)
     if (message.command === "clock") {
       insertClocks(message.campusURL, message.choice);
     } else if (message.command === "reset") {

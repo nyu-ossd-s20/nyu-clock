@@ -9,29 +9,24 @@
   }
   window.hasRun = true;
 
-  function showTime(choice){
+  let interval;
 
-    console.log(choice);
+  function showTime(choice){
     let date;
 
     if (choice === "New York") {
-      console.log("Case NY");
       date = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
     }
     else if (choice === "Abu Dhabi") {
-      console.log("Case AD");
       date = new Date().toLocaleString("en-US", {timeZone: "Asia/Dubai"});
     }
     else if (choice ===  "Shanghai") {
-      console.log("Case SH");
       date = new Date().toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
     } else {
-      console.log("ERR");
       date = new Date();
     }
 
     date = new Date(date)
-    console.log(date);
 
     var h = date.getHours();
     var m = date.getMinutes();
@@ -50,10 +45,8 @@
     s = (s < 10) ? "0" + s : s;
 
     var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("container-id").innerText = time;
-    document.getElementsById("container-id").textContent = time;
 
-    setTimeout(showTime, 1000);
+    document.getElementById("container-id").innerText = time;
   }
 
 
@@ -97,7 +90,7 @@
     // campusImage.className = "campus-image";
     campusDIV.appendChild(container);
     document.body.appendChild(campusDIV);
-    setInterval(function() { showTime(choice); }, 1000);
+    interval = setInterval(function() { showTime(choice); }, 1000);
     // document.getElementsByClassName("campus-div").appendChild(campusImage);
   }
 
@@ -115,10 +108,18 @@
    * Listen for messages from the background script.
    * Call "beastify()" or "reset()".
    */
+
+  let curr;
+
   browser.runtime.onMessage.addListener((message) => {
-    console.log(message)
+    if (curr !== message.choice) {
+      clearInterval(interval);
+      removeExistingClocks();
+    }
+
     if (message.command === "clock") {
-      insertClocks(message.campusURL, message.choice);
+      curr = message.choice;
+      insertClocks(message.campusURL, curr);
     } else if (message.command === "reset") {
       removeExistingClocks();
     }

@@ -51,7 +51,7 @@
 
 
   /**
-   * Given a URL to a beast image, remove all existing beasts, then
+   * Given a URL to a campus image, remove all existing clocks, then
    * create and style an IMG node pointing to
    * that image, then insert the node into the document.
    */
@@ -84,18 +84,13 @@
     container.style.padding = "0px 5px 0px 5px";
     container.className = "container-div";
     container.id = "container-id";
-    // let campusImage = document.createElement("img");
-    // campusImage.setAttribute("src", campusURL);
-    // campusImage.style.height = "100vh";
-    // campusImage.className = "campus-image";
     campusDIV.appendChild(container);
     document.body.appendChild(campusDIV);
     interval = setInterval(function() { showTime(choice); }, 1000);
-    // document.getElementsByClassName("campus-div").appendChild(campusImage);
   }
 
   /**
-   * Remove every beast from the page.
+   * Remove all clocks from the page.
    */
   function removeExistingClocks() {
     let existingClocks = document.querySelectorAll(".campus-div");
@@ -106,7 +101,7 @@
 
   /**
    * Listen for messages from the background script.
-   * Call "beastify()" or "reset()".
+   * Call "clock()" or "reset()".
    */
 
   let curr;

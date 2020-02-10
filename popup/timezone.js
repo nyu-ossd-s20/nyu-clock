@@ -1,6 +1,6 @@
 /**
  * CSS to hide everything on the page,
- * except for elements that have the "beastify-image" class.
+ * except for elements that have the "campus-div" class.
  */
 const hidePage = `body > :not(.campus-div) {
                     display: none;
@@ -14,7 +14,7 @@ function listenForClicks() {
   document.addEventListener("click", (e) => {
 
     /**
-     * Given the name of a beast, get the URL to the corresponding image.
+     * Given the name of a campus, get the URL to the corresponding image.
      */
     function campusNameToURL(campusName) {
       switch (campusName) {
@@ -29,8 +29,8 @@ function listenForClicks() {
 
     /**
      * Insert the page-hiding CSS into the active tab,
-     * then get the beast URL and
-     * send a "beastify" message to the content script in the active tab.
+     * then get the campus URL and
+     * send a "clock" message to the content script in the active tab.
      */
     function clock(tabs) {
       browser.tabs.insertCSS({code: hidePage}).then(() => {
@@ -64,7 +64,7 @@ function listenForClicks() {
 
     /**
      * Get the active tab,
-     * then call "beastify()" or "reset()" as appropriate.
+     * then call "clock()" or "reset()" as appropriate.
      */
     if (e.target.classList.contains("campus")) {
       browser.tabs.query({active: true, currentWindow: true})

@@ -21,7 +21,7 @@ html, body {
 }
 
 #popup-content {
-  font-family: Gotham;
+  font-family: Gotham, sans-serif;
   font-size: 0.9rem;
   color: white;
 }

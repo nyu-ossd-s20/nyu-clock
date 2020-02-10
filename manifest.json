@@ -1,10 +1,10 @@
 {
 
   "manifest_version": 2,
-  "name": "World Clock",
+  "name": "NYU Clock",
   "version": "1.0",
 
-  "description": "Add a clock to the page with a selected time zone.",
+  "description": "Add a clock with the local time to the page with a selected NYU campus location.",
 
   "icons": {
     "48": "icons/clock-48.png",

@@ -2,6 +2,11 @@ html, body {
   width: 100px;
 }
 
+@font-face {
+  font-family: Gotham;
+  src: url(Gotham-Book.otf);
+}
+
 .hidden {
   display: none;
 }
@@ -12,20 +17,27 @@ html, body {
   text-align: center;
   font-size: 1em;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-.campus:hover {
-  background-color: #CFF2F2;
+#popup-content {
+  font-family: Gotham;
+  font-size: 0.9rem;
+  color: white;
 }
 
 .campus {
-  background-color: #E5F2F2;
+  background-color: #57068c;
 }
 
-.reset {
-  background-color: #FBFBC9;
+.campus:hover {
+  background-color: #8900e1;
+}
+
+.reset{
+  background-color: #330662;
 }
 
 .reset:hover {
-  background-color: #EAEA9D;
+  background-color: #220337;
 }

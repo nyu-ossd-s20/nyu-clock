@@ -10,4 +10,4 @@ MIT license
 
 ## Compatability
 
-Latest version of Firefox on PC or mobile.
+Any PC or mobile with Firefox of version 60.0+ installed.

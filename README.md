@@ -11,3 +11,8 @@ MIT license
 ## Compatability
 
 Any PC or mobile with Firefox of version 60.0+ installed.
+
+
+## Point of Contact
+
+mail to : fungluikoo@gmail.com, for any issues.

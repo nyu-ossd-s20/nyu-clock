@@ -8,11 +8,17 @@ This is an extension working on FireFox browser that can add a real-time clocks 
 
 MIT license
 
-## Compatability
+## Compatibility
 
 Any PC or mobile with Firefox of version 60.0+ installed.
 
+## Installation
+
+1. Download the ZIP file of this reposotory, and unzip it.
+2. Open [the debug page on FireFox](about:debugging#/runtime/this-firefox).
+3. Click "Load Temporary Extention" and open the directory where you just unzipped our files.
+4. The extension should now be working on your FireFox. Juat click on the new icon appeared at the right side of your toolbar above the screen, and you will find the three cities. Click reset when you finish.
 
 ## Point of Contact
 
-mail to : fungluikoo@gmail.com, for any issues.
+mail to : fungluikoo AT gmail DOT com, for any issues.
